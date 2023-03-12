@@ -1,0 +1,39 @@
+Domain lyer não pode ter referência de qualquer outro projeto, 
+mas Application layer precisa fazer referência a Domain layer
+
+# Domain Layer
+
+Entities, 
+Core Business Rules, 
+Factory Interfaces, 
+Enumerations,
+value objects,
+custom exceptions
+
+# Application Layer
+
+Implement use cases for you application
+
+suggest: use Mediator for use cases
+suggest: use Fluent Validation for dependency injection
+
+# Infrastructure Layer
+
+Introduce any external concerns such as external services or maybe the database
+some people like to split the infrastrucure layer into the infrastructure and
+persistence layers where persistence layer takes care of everything that
+is database related you can do this if you want to but it comes down to a
+personal preference
+
+# Presentation Layer
+
+here again you have two options, 
+
+one approach is to have a separate project
+for the presentatio layer here you're going to place your controllers or 
+minimal API endpoints or razor pages 
+depending what you're using for the presentation
+
+the other approach is to justify a web API project and define all of these inside
+of that project as well
+
